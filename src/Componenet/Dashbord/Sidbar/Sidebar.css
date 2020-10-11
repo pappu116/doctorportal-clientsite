@@ -1,0 +1,25 @@
+.bg-color {
+  background-image: linear-gradient(#18d2af, #0fcfea);
+  height: 100vh;
+}
+.side-bar {
+  margin-top: 80px;
+}
+
+.side-bar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.side-bar ul li {
+  padding: 20px;
+  color: #fff;
+}
+
+.side-bar span {
+  margin-left: 10px;
+}
+.side-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+}

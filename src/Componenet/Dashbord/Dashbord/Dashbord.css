@@ -1,0 +1,28 @@
+.total {
+  background-color: #00c689;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.petient {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #fda006;
+  color: #fff;
+  border-radius: 10px;
+}
+.today {
+  background-color: #3da5f4;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.pending {
+  background-color: #f1536e;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
