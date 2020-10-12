@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import { useForm } from "react-hook-form";
 import LoginBg from "../../images/Group 140.png";
 import "./Login.css";
 import firebaseConfig from "./firebase.config";
+import { UserContext } from "../../App";
+import { useHistory, useLocation } from "react-router-dom";
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
+
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  let history = useHistory();
+  let location = useLocation();
+
+  let { from } = location.state || { from: { pathname: "/" } };
 
   //google login hdandel code is
 
@@ -22,6 +30,8 @@ const Login = () => {
       .then(function (result) {
         const { displayName, email } = result.user;
         const signedInUser = { name: displayName, email };
+        setLoggedInUser(signedInUser);
+        stoeAuthtoken();
         console.log(signedInUser);
 
         // ...
@@ -29,6 +39,20 @@ const Login = () => {
       .catch(function (error) {
         const errorMessage = error.message;
         console.log(errorMessage);
+      });
+  };
+
+  const stoeAuthtoken = () => {
+    firebase
+      .auth()
+      .currentUser.getIdToken(/* forceRefresh */ true)
+      .then(function (idToken) {
+        sessionStorage.setItem("token", idToken);
+        history.replace(from);
+        console.log(idToken);
+      })
+      .catch(function (error) {
+        // Handle error
       });
   };
 

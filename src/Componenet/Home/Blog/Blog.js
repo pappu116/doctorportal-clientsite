@@ -2,41 +2,48 @@ import React from "react";
 import Gulati from "../../../images/wilson.png";
 import Ema from "../../../images/ema.png";
 import Aliza from "../../../images/aliza.png";
+import "./Blogs.css";
 import BlogsPost from "../BlogPost/BlogsPost";
 
 const blogData = [
   {
-    name: "Dr.Mashur Gulati",
+    title: "Check at least a doctor in a year for your teeth",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ",
+    author: "Dr. Cudi",
+    authorImg: Gulati,
     date: "23 April 2019",
-    title: "2 times of brush in a Day can Keep you Healthy",
-    img: Gulati,
   },
   {
-    name: "Dr.Ema Saheb ",
-    date: "23 April 2018",
-    title: "The tooth Canser taken A challenge",
-    img: Ema,
+    title: "Two time brush in a day can keep you healthy",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ",
+    author: "Dr. Sinthia",
+    authorImg: Ema,
+    date: "23 April 2019",
   },
   {
-    name: "Dr.Muklesor Gulati",
-    date: "24 April 2020",
-    title: "2 times of brush in a Day can Keep you Healthy",
-    img: Aliza,
+    title: "The tooth cancer is taking a challenge",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ",
+    author: "Dr. Cudi",
+    authorImg: Aliza,
+    date: "23 April 2019",
   },
 ];
 const Blog = () => {
   return (
-    <section>
-      <div className="mt-5 pt-5 pb-5 text-center ">
-        <h6 style={{ color: "#1CC7C1" }}>OUR BLOG</h6>
-        <h2 style={{ color: "#203047" }}>From Our Blog News</h2>
-      </div>
-
-      <div className=" d-flex justify-content-center">
-        <div className=" row"></div>
-        {blogData.map((bd) => (
-          <BlogsPost bd={bd}></BlogsPost>
-        ))}
+    <section className="blogs my-5">
+      <div className="container">
+        <div className="section-header text-center">
+          <h5 className="text-primary text-uppercase">our blog</h5>
+          <h1>From Our Blog News</h1>
+        </div>
+        <div className="card-deck mt-5">
+          {blogData.map((blog) => (
+            <BlogsPost blog={blog} key={blog.title} />
+          ))}
+        </div>
       </div>
     </section>
   );
