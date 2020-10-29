@@ -9,14 +9,14 @@
 [Demo](https://doctorportal-1c086.web.app)
 
 ## Project Features 
-- 👉 Doctor dashboard or Patients Dashboard deferent URL
+- 👉 Doctor dashboard or patients Dashboard deferent URL
 - 👉 Doctor Added Sediul
 - 👉 If Patients Want Appointment Removed
 - 👉 Appoint Ment Prossesing way
 - 👉 PrescriptionShow Dedicated Patients
 - 👉 Logged in Authentication with Firebase
 - 👉 Protected Page/Private Page
-- 👉 Patients Appointment Show Date waise 
+- 👉 The patient will be able to see according to his appointment date
 - 👉 When Doctor Approved Appointment Patients Show Status Aproved or proccesing or pending
 - 👉 Doctor Dashbord Show How many Patient Appointment request how many pending or how many approved or cancel
 
