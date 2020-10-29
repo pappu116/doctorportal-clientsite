@@ -16,6 +16,7 @@
 - 👉 PrescriptionShow Dedicated Patients
 - 👉 Logged in Authentication with Firebase
 - 👉 Protected Page/Private Page
+- 👉 Patients Appointment Show Date waise 
 - 👉 When Doctor Approved Appointment Patients Show Status Aproved or proccesing or pending
 - 👉 Doctor Dashbord Show How many Patient Appointment request how many pending or how many approved or cancel
 
